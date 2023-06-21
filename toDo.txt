@@ -1,0 +1,62 @@
+Capacidades do Sistema:
+ - Gerenciar vendas de determinada edição
+ - realizar sorteio da edição
+ - gerenciar ganhadores da edição
+
+----
+
+Info:
+
+\\\ Caracteristicas
+ - Valor: 10.00
+ - Tele Sena -> 2 conjuntos de 25 num. 2* chances|1 cartela
+ - Ganhador -> acerta 25 num de um dos conjuntos
+ - 20 concorrentes
+ - concorrente -> maxCartela = 15
+ - maxCartelas = 300
+ - numeros = entre 1 a 60 | SEM REPETIÇÕES
+ - Prêmio = 80% valor de vendas/ganhadores
+
+\\\ Sorteio
+ - Realiza Sorteio pós vendas gerais
+ - sorteia 25 num inicial. while(!ganhador) sorteia++ verificaGanhador()
+
+\\\ Final Sorteio:
+ - Numeros sorteados
+ - quantidade Tele Sena vendida
+ - quantidade ganhadores
+ - nome ganhadores
+ - valor premio/ganhador
+ - valor total tele vendidas
+ - lucro do silvão
+
+
+Info Tecnica: 
+
+||| Classes
+
+\\\ TeleSena
+ - valor de venda, que é um valor constante de R$10,00 | final
+ - dois arrays de tamanho 25, que se referem aos 2 conjuntos
+ - métodos necessários
+
+\\\ Pessoa
+ - nome
+ - um array de Tele Sena (que são as Tele Senas que ela possui para concorrer)
+ - valor de premiação recebido pelas Tele Senas premiadas
+ - métodos necessários
+
+\\\ ControleTeleSena
+ - array de pessoa | len = 20
+ - métodos necessários para gerenciar a venda de Tele Senas, gerenciar quantidade de Tele
+Senas vendidas, informações sobre prêmios, lucros e ganhadores
+ - método para realização do sorteio da Tele Sena
+ - métodos adicionais
+
+
+Cod extra:
+
+try{
+Thread.sleep(1000);
+}catch(Exception e){}
+
