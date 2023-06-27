@@ -1,15 +1,16 @@
 import java.util.Arrays;
 
 public class Pessoa {
-    private int quantidadeTeleSenas = (int) (Math.random() * 15 + 1);
+    // Declara variáveis privadas
     private String nome;
-    private TeleSena[] telesenas = new TeleSena[quantidadeTeleSenas];
+    private TeleSena[] TeleSenas;
     private double premiacao;
 
     // Construtor
-    public Pessoa(String nome) {
+    public Pessoa(String nome, int numTeleSenas) {
         this.nome = nome;
-        this.compraTeleSenas();
+        this.TeleSenas = new TeleSena[numTeleSenas];
+        compraTeleSenas();
     }
 
     // Métodos de acesso
@@ -21,12 +22,12 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public TeleSena[] getTelesenas() {
-        return telesenas;
+    public TeleSena[] getTeleSenas() {
+        return TeleSenas;
     }
 
-    public void setTelesenas(TeleSena[] telesenas) {
-        this.telesenas = telesenas;
+    public void setTeleSenas(TeleSena[] teleSenas) {
+        TeleSenas = teleSenas;
     }
 
     public double getPremiacao() {
@@ -37,34 +38,18 @@ public class Pessoa {
         this.premiacao = premiacao;
     }
 
-    public int getQuantidadeTeleSenas() {
-        return quantidadeTeleSenas;
-    }
-
-    public void setQuantidadeTeleSenas(int quantidadeTeleSenas) {
-        this.quantidadeTeleSenas = quantidadeTeleSenas;
-    }
-
-    // Outros Métodos
-    public int valorGasto() {
-        return telesenas.length*10;
-    }
-
-    public boolean compraTeleSenas() {
-        for(int i =0; i < telesenas.length; i++) {
-            telesenas[i] = new TeleSena();
+    // Compra as teleSenas da pessoa
+    public void compraTeleSenas() {
+        for(int i = 0; i < this.getTeleSenas().length; i++) {
+            this.getTeleSenas()[i] = new TeleSena();
         }
-
-        return telesenas[telesenas.length - 1] != null;
     }
 
     @Override
     public String toString() {
         return "Pessoa{" +
                 "nome='" + nome + '\'' +
-                ", telesenas=" + Arrays.toString(telesenas) +
-                ", premiacao=" + premiacao +
-                ", TeleSenas Compradas=" + quantidadeTeleSenas +
+                ", TeleSenas=" + Arrays.toString(TeleSenas) +
                 '}';
     }
 }

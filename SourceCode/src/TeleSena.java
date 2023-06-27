@@ -1,58 +1,56 @@
 import java.util.Arrays;
 
 public class TeleSena {
-    private final int valor = 10;
-    private int[] num1 = new int[25];
-    private int[] num2 = new int[25];
+
+    public static final int preco = 10; // Declara o preço da TeleSena
+
+    // Declara variáveis privadas
+    private int[] cartela1 = new int[25];
+    private int[] cartela2 = new int[25];
 
     // Construtor
     public TeleSena() {
-        montaTeleSena();
+        compraTeleSena();
     }
 
     // Métodos de Acesso
-    public int getValor() {
-        return valor;
+    public int[] getCartela1() {
+        return cartela1;
     }
 
-    public int[] getNum1() {
-        return num1;
+    public void setCartela1(int[] cartela1) {
+        this.cartela1 = cartela1;
     }
 
-    public void setNum1(int[] num1) {
-        this.num1 = num1;
+    public int[] getCartela2() {
+        return cartela2;
     }
 
-    public int[] getNum2() {
-        return num2;
+    public void setCartela2(int[] cartela2) {
+        this.cartela2 = cartela2;
     }
 
-    public void setNum2(int[] num2) {
-        this.num2 = num2;
+    // Compra as duas cartelas da TeleSena
+    public void compraTeleSena() {
+        compraCartela(cartela1);
+        compraCartela(cartela2);
     }
 
-    // Monta a Tele Sena
-    public boolean montaTeleSena() {
-        return montaCartela(num1) && montaCartela(num2);
-    }
-
-    // Monta um conjunto de números
-    public boolean montaCartela(int[] arr) {
+    // Cria uma cartela da TeleSena
+    public void compraCartela(int[] arr) {
         for(int i = 0; i < arr.length; i++) {
-            int numero = (int) (Math.random() * 60 + 1);
-
-            while(taNaLista(numero, arr)) {
-                numero = (int) (Math.random() * 60 + 1);
+            int num = (int) (Math.random() * 60 + 1);
+            while(repeteNum(arr, num)) {
+                num = (int) (Math.random() * 60 + 1);
             }
-            arr[i] = numero;
+            arr[i] = num;
         }
-        return arr[24] != 0;
     }
 
-    // Checa se algum número está na lista, retornando um boolean
-    public boolean taNaLista(int numCompara, int[] lista) {
-        for(int i = 0; i < lista.length; i++) {
-            if(numCompara == lista[i]) return true;
+    // Checa se um número se repete
+    public static boolean repeteNum(int[] arr, int num) {
+        for (int arrNum : arr) {
+            if (num == arrNum) return true;
         }
         return false;
     }
@@ -60,8 +58,8 @@ public class TeleSena {
     @Override
     public String toString() {
         return "TeleSena{" +
-                "num1=" + Arrays.toString(num1) +
-                ", num2=" + Arrays.toString(num2) +
-                "}\n";
+                "cartela1=" + Arrays.toString(cartela1) +
+                ", cartela2=" + Arrays.toString(cartela2) +
+                '}';
     }
 }
