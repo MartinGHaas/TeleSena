@@ -1,5 +1,10 @@
 import java.text.DecimalFormat;
 
+/*
+ nome: Martin Gabriel Haas
+ autor: https://github.com/MartinGHaas
+ */
+
 public class ControleTeleSena {
     public int quantidadePessoas = 20; // Declara a quantidade padrão de pessoas
 

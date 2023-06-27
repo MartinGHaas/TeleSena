@@ -1,6 +1,10 @@
 import java.util.Objects;
 
-// Ajuda a desenvolver o projeto, facilita dms
+/*
+ nome: Martin Gabriel Haas
+ autor: https://github.com/MartinGHaas
+ */
+
 public class ArrayHelp {
 
     // preencheNoVazio

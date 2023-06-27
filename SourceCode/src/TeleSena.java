@@ -1,5 +1,10 @@
 import java.util.Arrays;
 
+/*
+ nome: Martin Gabriel Haas
+ autor: https://github.com/MartinGHaas
+ */
+
 public class TeleSena {
 
     public static final int preco = 10; // Declara o preço da TeleSena

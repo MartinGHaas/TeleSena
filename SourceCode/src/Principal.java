@@ -1,4 +1,10 @@
 import java.util.Scanner;
+
+/*
+ nome: Martin Gabriel Haas
+ autor: https://github.com/MartinGHaas
+ */
+
 public class Principal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
