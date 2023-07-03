@@ -14,3 +14,5 @@ _a Martin Haas' JAVA project for Unisinos_
 > - **IDE**: Intellij Community Edition
 > - JDK Version: openjdk-20
 > - toDo.txt: created to be easier to check toDo list
+
+##### Note: enter SourceCode for the code, anything else is from Intellij :)
