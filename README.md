@@ -8,7 +8,7 @@ _a Martin Haas' JAVA project for Unisinos_
 > - To access instructions, enter the PDF.
 
 ### STATUS
-🟡 | _**Under development**_
+🟢 | _**DONE**_
 
 > ## Organization
 > - **IDE**: Intellij Community Edition
